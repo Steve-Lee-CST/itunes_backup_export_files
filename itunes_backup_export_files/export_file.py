@@ -6,7 +6,7 @@ import sqlite3
 class exporter:
     def __init__(self, manifest_db_path: str):
         '''
-        :param base_path: the path of the file 'Manifest.db'
+        :param manifest_db_path: the path of the file 'Manifest.db'
         '''
         # base_path/Manifest.db
         self.manifest_db_path = os.path.abspath(manifest_db_path)
