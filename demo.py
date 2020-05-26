@@ -1,7 +1,7 @@
 from itunes_backup_export_files import exporter
 
 def filter(file_inner_join: dict) -> list:
-    domain_name = 'com.tencent.xin'
+    domain_name = 'com.apple.AppStore'
     file_list = []
     for item in file_inner_join.values():
         # domain filter
