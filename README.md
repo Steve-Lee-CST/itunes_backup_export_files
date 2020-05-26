@@ -2,7 +2,7 @@
 a package helps to export files from itunes-backup
 
 * Test environment: 
-  * win10-19041 & Python-3.8.3
+  * win10-19041 & Python-3.8.3 & iPad-Air3-IOS13.5
  
 * How to use:
   * use iTunes to backup ios devices data
