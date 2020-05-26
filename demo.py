@@ -1,8 +1,16 @@
 from itunes_backup_export_files import exporter
 
+def filter(file_inner_join: dict) -> list:
+    domain_name = 'com.tencent.xin'
+    file_list = []
+    for item in file_inner_join.values():
+        # domain filter
+        if 'com.tencent.xin' in item['domain']:
+            file_list.append(item)
+    return file_list
+
 if __name__ == "__main__":
     manifest_db_path = 'your_backup_path/Manifest.db'      # such as: 00003231-041c38926803092E/Manifest.db
-    domain_name = 'com.tencent.xin'
     save_path = 'temp/wechat'
 
     ep = exporter(manifest_db_path)
@@ -21,11 +29,7 @@ if __name__ == "__main__":
 
     # step 4
     # filter the files
-    file_list = []
-    for item in fij.values():
-        # domain filter
-        if 'com.tencent.xin' in item['domain']:
-            file_list.append(item)
+    file_list = filter(fij)
     
     # step 5
     # export files
